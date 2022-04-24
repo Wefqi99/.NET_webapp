@@ -1,0 +1,54 @@
+﻿@page
+@model WefqiHobbiesWebApp.Pages.Pcs.IndexModel
+
+@{
+    ViewData["Title"] = "Wefqi's PCs";
+}
+
+<h1>PCs</h1>
+
+<p>
+    <a asp-page="Create">Add PC</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pc[0].GraphicsCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pc[0].Cpu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pc[0].Ram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pc[0].StorageSpace)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pc) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GraphicsCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StorageSpace)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

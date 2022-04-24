@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="WefqiHobbiesWebApp20220424155300-CPSC-23000-week14webapp" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\wefqi\\Lewis\\net-programming\\web_app\\WefqiHobbiesWebApp\\WefqiHobbiesWebApp\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
